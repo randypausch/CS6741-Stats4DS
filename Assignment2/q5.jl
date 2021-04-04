@@ -88,7 +88,7 @@ end
 
 # ╔═╡ f20dc6be-8030-11eb-07af-e76530a1927a
 begin
-	b = moving_average(final_df.dailyrecovered, 7)
+	b = moving_average(final_df.dailyconfirmed, 7)
 	pushfirst!(b, 0.0)
 	pushfirst!(b, 0.0)
 	pushfirst!(b, 0.0)
@@ -96,7 +96,7 @@ begin
 	pushfirst!(b, 0.0)
 	pushfirst!(b, 0.0)
 	plot(final_df.date,b,leg=false,background_color = RGB(0.2, 0.2, 0.2))
-	title!("Increase in Recovered (Simple Moving Average)")
+	title!("Increase in Confirmed (Simple Moving Average)")
 end
 
 # ╔═╡ Cell order:
